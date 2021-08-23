@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Faipam",
+    "version": "1.0",
+    "description": "this extension for making dropshiping easy and it helps to track some hiden information within  aliexpres",
+    "background": {
+        "scripts": ["eventPage.js"]
+    },
+    "browser_action": {
+        "default_icon": "FAIPAM.png"
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "run_at": "document_start",
+            "matches": ["https://www.aliexpress.com/*"],
+            "js": ["content.js","jquery.min.js"]
+        }
+    ]
+}
